@@ -1,0 +1,5 @@
+*dataset/*
+*models/*
+*.pyc
+*__pycache__/*
+*.txt
