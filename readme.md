@@ -22,10 +22,13 @@ Do note that the quality of the output starts to degrade rapidly if you have spe
 
 ### Example input sentences : 
 
-I am the one knocking
-Everything before the word but
-a lion doesn't concern himself
-jon snow loves and he
+1. I am the one knocking
+
+2. Everything before the word but
+
+3. a lion doesn't concern himself
+
+4. jon snow loves and he
 
 ### Output for the example sentences
 
