@@ -1,24 +1,33 @@
 Generates text using GRU in style of the text fed to it during training
 
-Training
+### Training
 
 All you need to do is specify a model name along with a text file that you want to use to train the model in the config.py file . 
-After that run python main_code.py and the network will be trained 
+After that run 
 
-Inference
+```
+python main_code.py 
+```
+and the network will be trained 
 
-To use this model for inference you will have to run test_code.py and a prompt will come up asking you to enter 5 words. Using these 5 words as initial words for a sentence it will generate the number of words that you have specified in the config.py file
+### Inference
+
+To use this model for inference you will have to run 
+```
+python test_code.py 
+```
+and a prompt will come up asking you to enter 5 words. Using these 5 words as initial words for a sentence it will generate the number of words that you have specified in the config.py file
 
 Do note that the quality of the output starts to degrade rapidly if you have specified a large number in the number of words to generate parameter.
 
-Example input sentences : 
+### Example input sentences : 
 
 I am the one knocking
 Everything before the word but
 a lion doesn't concern himself
 jon snow loves and he
 
-Output for the example sentences
+### Output for the example sentences
 
 i am the one knocking on the walls and the first men and the king in the north
 i am the one knocking at the top of the wall the stone of the hall

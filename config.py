@@ -20,7 +20,7 @@ training_file_path = ""
 '''
 Change these values for inference
 '''
-num_words_to_generate = 
+num_words_to_generate = 15
 
 '''
 Don't touch this
