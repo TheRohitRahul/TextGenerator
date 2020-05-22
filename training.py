@@ -6,7 +6,7 @@ from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
 from model import GruRnn
-from config import hidden_size, n_layers, DEVICE, model_save_path, model_name
+from config import hidden_size, n_layers, DEVICE, model_save_path, model_name, batch_size, n_epoch
 from text_dataloader import TextLoader
 
 def run_epoch(decoder, critirion, decoder_optimizer, train_loader, batch_size):
@@ -32,10 +32,8 @@ def run_epoch(decoder, critirion, decoder_optimizer, train_loader, batch_size):
 
 
 def train(train_file_path):
-    n_epoch = 300
     print_every = 2
     lr = 1e-3
-    batch_size = 4096
 
     obj_text = TextLoader(train_file_path)
     voc_len = obj_text.get_voc_len()

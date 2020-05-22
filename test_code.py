@@ -4,7 +4,7 @@ import os
 import pickle
 
 from model import GruRnn
-from config import DEVICE, n_layers, hidden_size, model_save_path, model_name, num_words_generate
+from config import DEVICE, n_layers, hidden_size, model_save_path, model_name, num_words_to_generate, test_model_name
 
 def preprocess_words(list_words, word_to_num):
     for a_word in list_words:
@@ -29,7 +29,7 @@ def run_model(inputs, voc_len, model_path):
 
     decoder.eval()
     hidden = decoder.init_hidden(1).cuda()
-    for i in range(num_words_generate):
+    for i in range(num_words_to_generate):
         output, hidden = decoder(inputs.cuda(), hidden)
         
         argmax = torch.argmax(output)
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     with open(os.path.join(model_save_path, "preprocess_dict_word_num_rel_{}.pkl".format(model_name)), "rb") as f:
         load_dict = pickle.load(f)
 
-    model_save_path = os.path.join(model_save_path, "epoch_30.pt")
+    model_save_path = os.path.join(model_save_path, test_model_name)
 
     word_to_num = load_dict["word_to_num"]
     num_to_word = load_dict["num_to_word"]

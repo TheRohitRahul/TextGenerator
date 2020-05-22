@@ -4,13 +4,13 @@ def read_sentences(file_path):
     all_read_lines = []
     all_final_lines = []
     chapter_title = ['CATELYN', 'JON', 'ARYA', 'EDDARD', "TYRION", "BRAN"]
-    punctuation_list = ["\n", ",", '"', ".", "..", "...", "?", ";", "' ", "!", "-"]
+    punctuation_list = ["\n", ",", '"', ".", "..", "...", "?", ";", "' ", "!", "-", "|", ">"]
     
     print("reading file {}".format(file_path))
     with open(file_path, "r") as f:
         rx = '(\n)*'
         rx_space = "  +"
-        all_read_lines = f.read().replace("killlllllllllled", "killed").replace("hissssssssssss", "his")
+        all_read_lines = f.read()
         
         for title in chapter_title:
             all_read_lines = all_read_lines.replace(title, " ")
